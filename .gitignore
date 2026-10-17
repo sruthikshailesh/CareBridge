@@ -1,0 +1,22 @@
+node_modules/
+.expo/
+dist/
+lib/
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+*.local
+.DS_Store
+.env
+.env.*
+
+# Local secrets and generated files
+*.log
+*.zip
+.firebase/
+.expo/
+.DS_Store
+.env
+.env.*
+!.env.example

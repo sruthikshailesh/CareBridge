@@ -1,0 +1,23 @@
+{
+  "name": "diabetes-care",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*",
+    "app",
+    "dashboard",
+    "functions"
+  ],
+  "scripts": {
+    "build:shared": "npm run build -w @diabetes/shared",
+    "build:functions": "npm run build -w functions",
+    "dev:app": "npm run start -w app",
+    "dev:dashboard": "npm run dev -w dashboard",
+    "emulators": "firebase emulators:start",
+    "deploy:rules": "firebase deploy --only firestore:rules,firestore:indexes",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.35.0"
+  }
+}
